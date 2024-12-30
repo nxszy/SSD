@@ -4,7 +4,7 @@ public class CameraController : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private Camera cam;
-    [SerializeField] private GridManager grid;
+    [SerializeField] private LayoutManager grid;
 
     [Header("Camera movement settings")]
     [SerializeField] private float cameraMovementSpeed = 2.5f;
@@ -22,7 +22,7 @@ public class CameraController : MonoBehaviour
     private void Start() {
         zoom = (maxZoom + minZoom) / 2;
 
-        Vector2 gridSize = grid.GridSize;
+        Vector2 gridSize = grid.Size;
         transform.position = new Vector3(gridSize.x / 2, gridSize.y / 2, transform.position.z);
     }
 
