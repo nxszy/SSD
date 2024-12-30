@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class LayoutManager : MonoBehaviour
@@ -92,6 +93,7 @@ public class LayoutManager : MonoBehaviour
     {
         foreach (var cell in grid.Values)
         {
+            cell.Clear();
             Destroy(cell.gameObject);
         }
         grid.Clear();

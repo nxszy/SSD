@@ -25,6 +25,11 @@ public class GridCell : MonoBehaviour
     {
         layoutManager = LayoutManager.Instance;
     }
+    
+    public void Clear()
+    {
+        HidePreview();
+    }
 
     public void Initialize(int x, int y, CellType cellType) {
         this.x = x;
